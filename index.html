@@ -173,6 +173,27 @@ footer{margin:26px 0 24px;padding:18px 22px;font-size:13px;color:var(--soluk);di
 .secim-izgara a{display:flex;flex-direction:column;justify-content:center;height:78px;padding:0 16px;border-radius:16px;background:var(--kart2);border:1px solid var(--cizgi);text-decoration:none;font-weight:700;font-size:15px;line-height:1.25}
 .secim-izgara a small{font-weight:500;color:var(--soluk);font-size:12px;margin-top:3px}
 .secim-izgara a:hover{border-color:var(--vurgu)}
+.secim.secim-ic{padding:20px 0 0;margin:6px 0 18px;border-top:1px solid var(--cizgi)}
+.secim-ic h2{font-size:25px;font-weight:800;color:var(--vurgu);letter-spacing:.2px}
+.secim-ic .secim-izgara{grid-template-columns:repeat(2,1fr)}
+/* Sorununuz ne? kutuları: her biri ayrı, yumuşak tek renk */
+.secim-ic .secim-izgara a:nth-child(1){background:#e8f0fe;border-color:#c9dbfb}
+.secim-ic .secim-izgara a:nth-child(2){background:#e6f6ef;border-color:#c4e8d6}
+.secim-ic .secim-izgara a:nth-child(3){background:#fdf0e3;border-color:#f3d8ba}
+.secim-ic .secim-izgara a:nth-child(4){background:#f1ebfb;border-color:#dcd0f2}
+.secim-ic .secim-izgara a:nth-child(5){background:#fbeaea;border-color:#efcccc}
+.secim-ic .secim-izgara a:nth-child(6){background:#fdf6dc;border-color:#ece0a8}
+.secim-ic .secim-izgara a:nth-child(7){background:#e5f4f7;border-color:#c3e2e9}
+.secim-ic .secim-izgara a:nth-child(8){background:#eef0e3;border-color:#d6dbbd}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(1){background:#1c2a40;border-color:#2c3f5e}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(2){background:#1a3128;border-color:#2a4a3c}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(3){background:#37291c;border-color:#523d29}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(4){background:#2a2340;border-color:#3e345c}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(5){background:#382224;border-color:#543337}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(6){background:#34301a;border-color:#4e4828}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(7){background:#173137;border-color:#264a52}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(8){background:#2b2f1f;border-color:#41472f}
+.secim-ic .secim-izgara a:hover{border-color:var(--vurgu)}
 /* ADIMLAR */
 .adimlar{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .adim{padding:22px;min-height:170px}
@@ -238,6 +259,20 @@ footer{margin:26px 0 24px;padding:18px 22px;font-size:13px;color:var(--soluk);di
       <div class="ust-etiket">Hızlı Altyapı Çözümleri</div>
       <h1>Altyapı sorunlarında 7/24 hızlı, temiz ve güvenilir çözüm.</h1>
       <p>Foseptik çekimi, kanal açma, logar temizliği ve tıkanıklık... Gece gündüz arayın, en yakın aracımız hemen yola çıksın.</p>
+      <div class="secim secim-ic" id="sorun">
+        <h2>Sorununuz ne?</h2>
+        <p>Size uyanı seçin, doğru hizmete gidin.</p>
+        <div class="secim-izgara">
+          <a href="antalya-tuvalet-lavabo-acma">Tuvalet tıkalı<small>Klozet, tuvalet</small></a>
+          <a href="antalya-tikaniklik-gider-acma">Lavabo / gider tıkalı<small>Mutfak, banyo</small></a>
+          <a href="antalya-logar-tikanikligi-acma">Logar taşıyor<small>Logar, rögar</small></a>
+          <a href="antalya-kanalizasyon-acma">Kanalizasyon tıkalı<small>Bina, ana hat</small></a>
+          <a href="antalya-foseptik-cekimi">Foseptik doldu<small>Çekim, boşaltma</small></a>
+          <a href="antalya-yag-tutucu-temizleme">Yağ tutucu dolu<small>Restoran, otel</small></a>
+          <a href="antalya-kanal-goruntuleme">Sorunun yeri belli değil<small>Kameralı tespit</small></a>
+          <a href="antalya-vidanjor">Vidanjör lazım<small>Hemen gelsin</small></a>
+        </div>
+      </div>
       <div class="tuslar">
         <a class="tus ara" href="tel:+905323620744">Hemen Ara</a>
         <a class="tus wa" href="https://wa.me/905323620744" target="_blank">WhatsApp</a>
@@ -247,21 +282,6 @@ footer{margin:26px 0 24px;padding:18px 22px;font-size:13px;color:var(--soluk);di
         <div><b>Geniş Araç Filosu</b><small>Dar sokaktan büyük tesise uygun araç.</small></div>
         <div><b>Deneyimli Ekip</b><small>İşini bilen operatörlerle kalıcı çözüm.</small></div>
       </div>
-    </div>
-  </div>
-
-  <div class="kart secim" id="sorun" style="margin-top:14px">
-    <h2>Sorununuz ne?</h2>
-    <p>Size uyanı seçin, doğru hizmete gidin.</p>
-    <div class="secim-izgara">
-      <a href="antalya-tuvalet-lavabo-acma">Tuvalet tıkalı<small>Klozet, tuvalet</small></a>
-      <a href="antalya-tikaniklik-gider-acma">Lavabo / gider tıkalı<small>Mutfak, banyo</small></a>
-      <a href="antalya-logar-tikanikligi-acma">Logar taşıyor<small>Logar, rögar</small></a>
-      <a href="antalya-kanalizasyon-acma">Kanalizasyon tıkalı<small>Bina, ana hat</small></a>
-      <a href="antalya-foseptik-cekimi">Foseptik doldu<small>Çekim, boşaltma</small></a>
-      <a href="antalya-yag-tutucu-temizleme">Yağ tutucu dolu<small>Restoran, otel</small></a>
-      <a href="antalya-kanal-goruntuleme">Sorunun yeri belli değil<small>Kameralı tespit</small></a>
-      <a href="antalya-vidanjor">Vidanjör lazım<small>Hemen gelsin</small></a>
     </div>
   </div>
 
