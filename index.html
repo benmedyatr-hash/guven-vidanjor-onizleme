@@ -349,6 +349,57 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
 .mini small{color:#dbe5f1 !important;font-size:14px !important}
 .mini-simge{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;background:var(--sari);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 5px rgba(255,196,0,.22)}
 .mini-simge svg{width:28px;height:28px}
+/* Sandviç menü */
+.menu-tus{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:34px;height:34px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.menu-tus span{display:block;height:3px;border-radius:2px;background:#fff;transition:transform .25s,opacity .25s}
+.menu-tus[aria-expanded="true"] span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.menu-tus[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-tus[aria-expanded="true"] span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+.ust .sag{position:static}
+.menu{display:none !important;flex-direction:column;gap:2px;padding:8px;overflow:visible}
+.menu.acik{display:flex !important}
+.menu a{padding:13px 16px !important;border-radius:12px;font-size:16px !important;color:var(--yazi) !important}
+.menu a:hover{background:var(--kart2)}
+.menu-tema{display:flex;align-items:center;gap:10px;padding:8px 10px;border-top:1px solid var(--cizgi);margin-top:4px;color:var(--soluk);font-size:14px}
+.menu-tema .tema-tus{width:36px;height:36px}
+.ust .menu-tus{top:8px;right:14px;transform:none;width:28px;height:22px;gap:5px}
+.ust .menu-tus[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.ust .menu-tus[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media (min-width:481px){.ust .menu-tus{top:14px;right:18px}}
+/* 7/24 Güvenilir çözüm ortağınız: büyük, beyaz */
+.manset .alt{font-size:24px;font-weight:800;color:#fff;line-height:1.25;margin:14px 0 14px}
+@media (max-width:600px){.manset .alt{font-size:21px}}
+/* "7/24 Güvenilir çözüm ortağınız" = "Antalya'da Profesyonel" ile aynı ölçü */
+.manset .alt{font-size:30px;font-weight:800;line-height:1.12}
+@media (max-width:600px){.manset .alt{font-size:26px}}
+/* "Vidanjör Hizmetleri" üst ve alt satıra eşit uzaklıkta */
+.manset h1 mark{margin-top:16px;margin-bottom:0}
+.manset .alt{margin:16px 0 16px !important}
+/* Sandviç menü logonun solunda (kalkan yerine), logo yazısı daha büyük */
+.ust .menu-tus{position:static !important;order:0;flex:0 0 auto;width:30px;height:24px;gap:6px;margin-right:12px;transform:none}
+.ust .menu-tus[aria-expanded="true"] span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.ust .menu-tus[aria-expanded="true"] span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+.ust{padding-right:16px !important}
+.ust .logo-kalkan>.logo-iki{font-size:38px}
+@media (max-width:480px){.ust{padding-right:10px !important}.ust .menu-tus{width:26px;margin-right:9px}.ust .logo-kalkan>.logo-iki{font-size:27px}}
+.ust .logo-kalkan{margin-right:auto}
+@media (max-width:380px){.ust .logo-kalkan>.logo-iki{font-size:25px}.ust .menu-tus{margin-right:8px}.ust .yirmidort{padding-left:6px;margin-left:4px}}
+/* GÜVEN, VİDANJÖR'den büyük */
+.ust .logo-kalkan>.logo-iki{font-size:50px;line-height:1}
+.ust .logo-kalkan>.logo-iki span{font-size:38px}
+@media (max-width:480px){.ust .logo-kalkan>.logo-iki{font-size:35px}.ust .logo-kalkan>.logo-iki span{font-size:27px}}
+@media (max-width:380px){.ust .logo-kalkan>.logo-iki{font-size:33px}.ust .logo-kalkan>.logo-iki span{font-size:25px}}
+/* GÜVEN, VİDANJÖR'e göre ortalı; sandviç küçük ve ince */
+.ust .logo-kalkan>.logo-iki{text-align:center;align-items:center}
+.ust .menu-tus{width:22px !important;height:16px !important;gap:4px !important}
+.ust .menu-tus span{height:2px;border-radius:1px;opacity:.9}
+.ust .menu-tus[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.ust .menu-tus[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:480px){.ust .menu-tus{width:20px !important}}
+/* Gece/gündüz düğmesi eski yerinde: sağ üst köşe */
+.ust .sag{position:absolute !important;right:10px;top:8px}
+.ust .sag .tema-tus{width:26px;height:26px;border:0;background:transparent;color:#c9d6e6}
+.ust .sag .tema-tus svg{width:14px;height:14px}
 </style>
 </head>
 <body>
@@ -373,14 +424,14 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
         <circle cx="46" cy="32" r="2.4" fill="#e02424"/>
         
       </svg><span class="yd-yazi"><b>7/24</b><small>KESİNTİSİZ<br>HİZMET</small></span></span>
-      <a class="logo logo-kalkan" href="#"><svg class="kalkan" viewBox="0 0 64 74" aria-hidden="true"><path d="M32 3 L59 13 V36 C59 53 47 65 32 71 C17 65 5 53 5 36 V13 Z" fill="#ffc400"/><path d="M32 10 L53 18 V36 C53 49 44 59 32 64 C20 59 11 49 11 36 V18 Z" fill="#0b2545"/><path d="M32 20 C38 29 43 35 43 42 A11 11 0 0 1 21 42 C21 35 26 29 32 20 Z" fill="#fff"/><path d="M27 43 A5 5 0 0 0 32 48" fill="none" stroke="#0b2545" stroke-width="2.4" stroke-linecap="round"/></svg><span class="logo-iki">GÜVEN<span>VİDANJÖR</span></span></a></div>
+      <button class="menu-tus" type="button" aria-label="Menüyü aç" aria-expanded="false" onclick="menuAcKapa(this)"><span></span><span></span><span></span></button><a class="logo logo-kalkan" href="#"><span class="logo-iki">GÜVEN<span>VİDANJÖR</span></span></a></div>
     </div>
     <div class="sag">
       <button class="tema-tus" onclick="temaDegis()" title="Koyu renge geç" aria-label="Koyu renge geç"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></button>
     </div>
   </header>
 
-  <nav class="kart menu">
+  <nav class="kart menu" id="ana-menu">
     <a class="aktif" href="#">Anasayfa</a>
     <a href="#hizmetler">Hizmetlerimiz</a>
     <a href="#bolgeler">Bölgeler</a>
@@ -392,12 +443,11 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
     <img src="resimler/giris.jpg" alt="Güven Vidanjör aracı">
     <div class="manset-ic">
       <h1>Antalya'da Profesyonel<br><mark>Vidanjör Hizmetleri</mark></h1>
-      <div class="alt">Güvenilir çözüm ortağınız</div>
-      <ul><li>7/24 Kesintisiz Hizmet</li><li>Hızlı Müdahale</li><li>Uygun Fiyat</li></ul>
+      <div class="alt">7/24 Güvenilir çözüm ortağınız</div>
+      <ul><li>Hızlı Müdahale</li><li>Uygun Fiyat</li><li>Kesin Çözüm</li></ul>
     </div>
   </section>
 
-  <div class="bant"><b>7/24</b><div><span>Hizmetinizdeyiz</span><small>Gece gündüz, Antalya'nın her yerine hızlı servis</small></div></div>
 
   <div class="giris">
     <div class="foto"><img src="resimler/ust-arac.jpg" alt="Vidanjör aracı" loading="lazy"></div>
@@ -555,6 +605,8 @@ function talepGonder(e){
 }
 var HILAL='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>';
 var GUNES='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>';
+function menuAcKapa(b){var m=document.getElementById('ana-menu');var a=m.classList.toggle('acik');b.setAttribute('aria-expanded',a);b.setAttribute('aria-label',a?'Menüyü kapat':'Menüyü aç')}
+document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('#ana-menu a')){var m=document.getElementById('ana-menu');m.classList.remove('acik');var b=document.querySelector('.menu-tus');if(b)b.setAttribute('aria-expanded','false')}});
 function temaDegis(){
   var h=document.documentElement, k=h.getAttribute('data-tema')==='koyu';
   h.setAttribute('data-tema',k?'acik':'koyu');
