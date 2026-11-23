@@ -472,6 +472,30 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
 .arac:nth-child(n) h3{color:var(--sari);font-weight:800}
 .arac:nth-child(n) p{color:#dbe5f1}
 .arac:nth-child(n) .is{color:#fff;font-weight:700;border-top-color:rgba(255,255,255,.18)}
+/* Zengin alt bilgi */
+.alt-bilgi{margin:26px 0 24px;background:var(--lacivert);color:#dbe5f1;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(11,37,69,.25)}
+.ab-ust{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px;padding:28px 26px 22px}
+.ab-logo{font-family:"Arial Black",Arial,sans-serif;font-weight:900;font-size:26px;line-height:1.05;color:#fff;display:flex;flex-direction:column}
+.ab-logo span{color:var(--sari)}
+.ab-marka p{margin:12px 0 0;font-size:14px;line-height:1.6;color:#c9d6e6}
+.ab-sutun{display:flex;flex-direction:column;gap:8px;font-size:14px}
+.ab-sutun b{color:var(--sari);font-size:15px;margin-bottom:4px;letter-spacing:.3px}
+.ab-sutun a{color:#fff;text-decoration:none}
+.ab-sutun a:hover{color:var(--sari)}
+.ab-724{display:inline-block;align-self:flex-start;margin-top:4px;padding:4px 12px;border-radius:20px;background:var(--sari);color:var(--lacivert);font-weight:800;font-size:13px}
+.ab-alt{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 26px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;color:#9fb3c8}
+.ab-imza{display:flex;flex-direction:column;align-items:flex-end;text-decoration:none;line-height:1.3}
+.ab-imza b{color:var(--sari);font-size:14px;letter-spacing:.4px}
+.ab-imza small{color:#c9d6e6;font-size:12px}
+@media (max-width:700px){.ab-ust{grid-template-columns:1fr;gap:20px;padding:24px 20px 18px}.ab-alt{flex-direction:column;align-items:flex-start;padding:16px 20px}.ab-imza{align-items:flex-start}}
+/* Alt bilgi düzeltme (genel footer kuralını ezer) */
+footer.alt-bilgi{display:block;padding:0;justify-content:initial}
+/* Harita kartı: lacivert-sarı */
+.harita{background:var(--lacivert) !important;border-left:5px solid var(--sari);position:relative;overflow:hidden}
+.harita iframe{border:3px solid var(--sari) !important}
+.harita-alt b{color:var(--sari);font-size:18px}
+.harita-alt small{color:#dbe5f1}
+.harita .yol{background:var(--sari) !important;color:var(--lacivert) !important;font-weight:800;box-shadow:0 6px 14px rgba(255,196,0,.3)}
 .sayfa-ust{margin-top:14px;padding:26px}.sayfa-ust h1{font-size:32px;line-height:1.15;margin:8px 0 12px}.sayfa-ust p{margin:0 0 18px;color:var(--soluk);font-size:16px}.geri{display:inline-block;font-size:13px;font-weight:600;color:var(--soluk);text-decoration:none;margin-bottom:6px}.liste.kart{background:var(--kart);border:0}.bolge-kutu{margin-top:14px;padding:20px 22px;font-size:15px}.bolge-kutu b{display:block;margin-bottom:4px}@media (max-width:600px){.sayfa-ust{padding:20px}.sayfa-ust h1{font-size:26px}}
 </style>
 </head>
@@ -559,9 +583,36 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
     </div>
   </div>
 
-<footer class="kart">
-    <span>© 2026 Güven Vidanjör</span>
-    <span>Taslak · Fotoğraflar örnektir (Wikimedia Commons, serbest lisanslı) — firmanın kendi fotoğraflarıyla değişecek</span>
+<footer class="alt-bilgi">
+    <div class="ab-ust">
+      <div class="ab-marka">
+        <div class="ab-logo">GÜVEN<span>VİDANJÖR</span></div>
+        <p>Antalya'da 7/24 vidanjör, foseptik çekimi, kanal ve tıkanıklık açma. Gece gündüz arayın, en yakın aracımız hemen yola çıksın.</p>
+      </div>
+      <div class="ab-sutun">
+        <b>Hizmetler</b>
+        <a href="antalya-foseptik-cekimi">Foseptik Çekimi</a>
+        <a href="antalya-tikaniklik-gider-acma">Tıkanıklık Açma</a>
+        <a href="antalya-tuvalet-lavabo-acma">Lavabo Tıkanıklığı Açma</a>
+        <a href="antalya-tuvalet-lavabo-acma">Tuvalet Tıkanıklığı Açma</a>
+        <a href="antalya-tikaniklik-gider-acma">Gider Tıkanıklığı Açma</a>
+        <a href="antalya-tuvalet-lavabo-acma">Klozet Tıkanıklığı Açma</a>
+        <a href="antalya-kanalizasyon-acma">Kanalizasyon Açma</a>
+        <a href="antalya-logar-tikanikligi-acma">Logar Tıkanıklığı Açma</a>
+        <a href="antalya-yag-tutucu-temizleme">Yağ Tutucu Temizleme</a>
+      </div>
+      <div class="ab-sutun">
+        <b>İletişim</b>
+        <a href="tel:+905323620744">0532 362 07 44</a>
+        <a href="https://wa.me/905323620744" target="_blank">WhatsApp'tan yazın</a>
+        <span>Karşıyaka 3010. Sk. No:19 D:1, Kepez/Antalya</span>
+        <span class="ab-724">7 gün 24 saat açık</span>
+      </div>
+    </div>
+    <div class="ab-alt">
+      <span>© 2026 Güven Vidanjör · Tüm hakları saklıdır.</span>
+      <a class="ab-imza" href="https://benmedya.com" target="_blank" rel="noopener"><b>BenMedya Dijital</b><small>Dijitale açılan kapınız, büyümede çözüm ortağınız.</small></a>
+    </div>
   </footer>
 </div>
 
