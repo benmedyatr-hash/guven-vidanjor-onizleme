@@ -44,6 +44,16 @@ a{color:inherit}
 .ust .logo{font-size:23px}
 .ust .sag{position:absolute;right:10px;top:10px}
 .ust .tema-tus{width:26px;height:26px;border-radius:50%;border:0;background:transparent;color:var(--soluk)}
+/* logo iki satır + sağ üstte 7/24 */
+.logo-iki{flex-direction:column;line-height:1.3;text-align:center}
+.ust{padding-top:22px;padding-bottom:22px}
+.ust .sag{display:flex;align-items:center;gap:4px}
+.yirmidort{display:inline-flex;line-height:0}
+.hiz-cizgi line{animation:hiz 1.1s ease-in-out infinite}
+.hiz-cizgi line:nth-child(2){animation-delay:.15s}
+.hiz-cizgi line:nth-child(3){animation-delay:.3s}
+@keyframes hiz{0%,100%{transform:translateX(0);opacity:1}50%{transform:translateX(-4px);opacity:.35}}
+@media (prefers-reduced-motion:reduce){.hiz-cizgi line{animation:none}}
 .ust .tema-tus svg{width:14px;height:14px}
 .ust-wa.ust-ara{background:#e02424}
 .ust-wa{display:inline-flex;align-items:center;justify-content:center;height:34px;padding:0 16px;border-radius:30px;background:var(--wa);color:#fff;font-weight:700;font-size:13px;text-decoration:none}
@@ -167,9 +177,10 @@ footer{margin:26px 0 24px;padding:18px 22px;font-size:13px;color:var(--soluk);di
   .genis .ic{padding:20px}
   .baslik h2{font-size:25px}
   .yuzen-wa{display:none}
-  .mobil-serit{display:flex;flex-direction:column;gap:12px;position:fixed;right:14px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:50}
-  .mobil-serit a{width:58px;height:58px;border-radius:50%;border:3px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff}
-  .mobil-serit svg{width:26px;height:26px}
+  .mobil-serit{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:var(--kart);box-shadow:0 -4px 14px rgba(0,0,0,.12);z-index:50}
+  .mobil-serit a{flex:1;height:50px;border-radius:10px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;font-weight:800;font-size:17px;letter-spacing:.3px}
+  body{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+  .yukari{bottom:calc(76px + env(safe-area-inset-bottom))}
   .mobil-serit .ara{background:#e02424}
   .mobil-serit .wa{background:var(--wa)}
 }
@@ -181,6 +192,27 @@ footer{margin:26px 0 24px;padding:18px 22px;font-size:13px;color:var(--soluk);di
 .secim-izgara a{display:flex;flex-direction:column;justify-content:center;height:78px;padding:0 16px;border-radius:16px;background:var(--kart2);border:1px solid var(--cizgi);text-decoration:none;font-weight:700;font-size:15px;line-height:1.25}
 .secim-izgara a small{font-weight:500;color:var(--soluk);font-size:12px;margin-top:3px}
 .secim-izgara a:hover{border-color:var(--vurgu)}
+.secim.secim-ic{padding:20px 0 0;margin:6px 0 18px;border-top:1px solid var(--cizgi)}
+.secim-ic h2{font-size:25px;font-weight:800;color:var(--vurgu);letter-spacing:.2px}
+.secim-ic .secim-izgara{grid-template-columns:repeat(2,1fr)}
+/* Sorununuz ne? kutuları: her biri ayrı, yumuşak tek renk */
+.secim-ic .secim-izgara a:nth-child(1){background:#e8f0fe;border-color:#c9dbfb}
+.secim-ic .secim-izgara a:nth-child(2){background:#e6f6ef;border-color:#c4e8d6}
+.secim-ic .secim-izgara a:nth-child(3){background:#fdf0e3;border-color:#f3d8ba}
+.secim-ic .secim-izgara a:nth-child(4){background:#f1ebfb;border-color:#dcd0f2}
+.secim-ic .secim-izgara a:nth-child(5){background:#fbeaea;border-color:#efcccc}
+.secim-ic .secim-izgara a:nth-child(6){background:#fdf6dc;border-color:#ece0a8}
+.secim-ic .secim-izgara a:nth-child(7){background:#e5f4f7;border-color:#c3e2e9}
+.secim-ic .secim-izgara a:nth-child(8){background:#eef0e3;border-color:#d6dbbd}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(1){background:#1c2a40;border-color:#2c3f5e}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(2){background:#1a3128;border-color:#2a4a3c}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(3){background:#37291c;border-color:#523d29}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(4){background:#2a2340;border-color:#3e345c}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(5){background:#382224;border-color:#543337}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(6){background:#34301a;border-color:#4e4828}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(7){background:#173137;border-color:#264a52}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(8){background:#2b2f1f;border-color:#41472f}
+.secim-ic .secim-izgara a:hover{border-color:var(--vurgu)}
 /* ADIMLAR */
 .adimlar{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .adim{padding:22px;min-height:170px}
@@ -221,10 +253,22 @@ footer{margin:26px 0 24px;padding:18px 22px;font-size:13px;color:var(--soluk);di
 
   <header class="kart ust">
     <div class="marka">
-      <a class="logo" href="./">GÜVEN&nbsp;<span>VİDANJÖR</span></a>
-      <a class="ust-wa ust-ara" href="tel:+905323620744">Hemen Ara</a>
+      <a class="logo logo-iki" href="#">GÜVEN<span>VİDANJÖR</span></a>
     </div>
     <div class="sag">
+      <span class="yirmidort" aria-label="7 gün 24 saat açık"><svg viewBox="0 0 80 56" width="74" height="52" aria-hidden="true">
+        <g class="hiz-cizgi" stroke="#e02424" stroke-width="3.2" stroke-linecap="round">
+          <line x1="2" y1="18" x2="20" y2="18"/><line x1="8" y1="28" x2="22" y2="28"/><line x1="2" y1="38" x2="20" y2="38"/>
+        </g>
+        <g transform="translate(52 28) skewX(-8)">
+          <circle r="25" fill="#e02424"/>
+          <circle r="21" fill="none" stroke="#fff" stroke-width="1.6"/>
+          <g stroke="#fff" stroke-width="2" stroke-linecap="round">
+            <line y1="-21" y2="-17"/><line x1="21" x2="17"/><line y1="21" y2="17"/><line x1="-21" x2="-17"/>
+          </g>
+          <text y="6" text-anchor="middle" font-size="17" font-weight="800" fill="#fff" font-family="inherit">7/24</text>
+        </g>
+      </svg></span>
       <button class="tema-tus" onclick="temaDegis()" title="Koyu renge geç" aria-label="Koyu renge geç"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></button>
     </div>
   </header>
@@ -321,8 +365,8 @@ footer{margin:26px 0 24px;padding:18px 22px;font-size:13px;color:var(--soluk);di
 <button class="yukari" type="button" aria-label="Yukarı çık" title="Yukarı çık" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15.5l7-7 7 7"/></svg></button>
 <script>(function(){var b=document.querySelector('.yukari');function k(){b.classList.toggle('gorunur',window.scrollY>400)}window.addEventListener('scroll',k,{passive:true});k()})();</script>
 <div class="mobil-serit">
-  <a class="wa" href="https://wa.me/905323620744" target="_blank" aria-label="WhatsApp ile yaz" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg></a>
-  <a class="ara" href="tel:+905323620744" aria-label="Hemen ara" title="Hemen Ara"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+  <a class="ara" href="tel:+905323620744">Hemen Ara</a>
+  <a class="wa" href="https://wa.me/905323620744" target="_blank">WhatsApp</a>
 </div>
 
 <script>
