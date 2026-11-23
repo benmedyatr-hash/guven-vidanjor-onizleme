@@ -47,8 +47,16 @@ a{color:inherit}
 /* logo iki satır + sağ üstte 7/24 */
 .logo-iki{flex-direction:column;line-height:1.3;text-align:center}
 .ust{padding-top:22px;padding-bottom:22px}
-.ust .sag{display:flex;align-items:center;gap:4px}
-.yirmidort{display:inline-flex;line-height:0}
+.logo-satir{display:flex;align-items:center;gap:8px}
+.ust .yirmidort{position:absolute;left:14px;top:50%;transform:translateY(-50%)}
+@media (max-width:480px){.ust{padding-left:124px;padding-right:12px}.ust .yirmidort{left:6px}.ust .yirmidort svg{width:112px;height:53px}}
+.ust .logo{font-size:29px}
+.yirmidort svg{width:120px;height:56px;overflow:visible}
+.nabiz{transform-box:fill-box;transform-origin:center;animation:nabiz 1.6s ease-out infinite}
+.ok-yay{transform-box:view-box;transform-origin:46px 32px;animation:don 6s linear infinite}@keyframes don{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.ok-yay{animation:none}}
+@keyframes nabiz{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.35);opacity:0}}
+@media (prefers-reduced-motion:reduce){.nabiz{animation:none;opacity:0}}
+.yirmidort{display:inline-flex;line-height:0;color:var(--yazi,#0f172a)}
 .hiz-cizgi line{animation:hiz 1.1s ease-in-out infinite}
 .hiz-cizgi line:nth-child(2){animation-delay:.15s}
 .hiz-cizgi line:nth-child(3){animation-delay:.3s}
@@ -90,7 +98,7 @@ a{color:inherit}
 .baslik p{margin:6px 0 0;color:var(--soluk);font-size:15px}
 
 /* HİZMETLER */
-.hizmetler{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.hizmetler{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .hizmet{overflow:hidden;display:flex;flex-direction:column}
 .hizmet .foto{height:170px;border-radius:22px 22px 0 0}.foto img{display:block;width:100%;height:100%;object-fit:cover}
 .hizmet .ic{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
@@ -246,6 +254,96 @@ html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(8){background:#2b2f1f
 @media (max-width:600px){.adimlar,.araclar{grid-template-columns:1fr}.adim,.arac{min-height:0}.secim{padding:18px}.secim-izgara a{height:72px;padding:0 12px;font-size:14px}.yol{width:100%}}
 .sayfa-ust{margin-top:14px;padding:26px}.sayfa-ust h1{font-size:32px;line-height:1.15;margin:8px 0 12px}.sayfa-ust p{margin:0 0 18px;color:var(--soluk);font-size:16px}.geri{display:inline-block;font-size:13px;font-weight:600;color:var(--soluk);text-decoration:none;margin-bottom:6px}.liste.kart{background:var(--kart);border:0}.bolge-kutu{margin-top:14px;padding:20px 22px;font-size:15px}.bolge-kutu b{display:block;margin-bottom:4px}@media (max-width:600px){.sayfa-ust{padding:20px}.sayfa-ust h1{font-size:26px}}
 </style>
+<style>
+/* === DİKKAT ÇEKİCİ ÜST (deneme 3) === */
+:root{--lacivert:#0b2545;--sari:#ffc400}
+.ust{background:var(--lacivert)}
+.ust .logo{color:#fff}.ust .logo span{color:var(--sari)}
+.ust .yirmidort{color:#fff}
+.ust .yirmidort text[fill="#e02424"]{fill:var(--sari)}
+.ust .tema-tus{color:#c9d6e6}
+.manset{margin-top:14px;position:relative;overflow:hidden;border-radius:22px;min-height:420px;display:flex;align-items:flex-end;box-shadow:var(--golge)}
+.manset>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.manset:before{content:"";position:absolute;inset:0;z-index:1;background:rgba(11,37,69,.66)}
+.manset-ic{position:relative;z-index:2;padding:26px 22px 22px;color:#fff;width:100%}
+.manset .konum{display:inline-block;font-size:13px;font-weight:700;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:5px 12px;border-radius:30px;margin-bottom:12px}
+.manset h1{margin:0;font-size:30px;line-height:1.12;font-weight:800}
+.manset h1 mark{display:inline-block;margin-top:8px;background:var(--lacivert);color:var(--sari);padding:6px 14px 8px;border-radius:12px;border:2px solid var(--sari);font-size:34px;line-height:1.05}
+.manset .alt{margin:12px 0 14px;font-size:17px;font-weight:700}
+.manset ul{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:8px}
+.manset li{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px}
+.manset li:before{content:"";flex:0 0 20px;height:20px;border-radius:50%;background:var(--sari) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%230b2545' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.manset-tus{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.manset-tus a{display:flex;flex-direction:column;justify-content:center;align-items:center;height:64px;border-radius:16px;text-decoration:none;font-weight:800;font-size:18px;line-height:1.15;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.manset-tus a small{font-size:14px;font-weight:700}
+.manset-tus .ara{background:var(--sari);color:var(--lacivert)}
+.manset-tus .wa{background:var(--wa);color:#fff}
+.bant{margin-top:14px;background:var(--lacivert);color:#fff;border-radius:22px;padding:20px 22px;display:flex;align-items:center;gap:16px;box-shadow:var(--golge)}
+.bant b{font-size:44px;line-height:1;font-weight:900;font-style:italic;color:var(--sari)}
+.bant span{display:block;font-size:20px;font-weight:800;line-height:1.2}
+.bant small{display:block;font-size:14px;color:#c9d6e6;margin-top:2px}
+@media (max-width:600px){.manset{min-height:520px}.manset h1{font-size:26px}.manset h1 mark{font-size:30px}.bant b{font-size:38px}}
+/* Hizmet kutuları alt alta, simgeli */
+.secim-ic .secim-izgara{grid-template-columns:1fr !important;gap:10px}
+.secim-ic .secim-izgara a{flex-direction:row;align-items:center;justify-content:flex-start;gap:14px;height:76px;padding:0 14px;font-size:16px;transition:transform .15s}
+.secim-ic .secim-izgara a:active{transform:scale(.98)}
+.hz-simge{flex:0 0 50px;height:50px;border-radius:14px;background:var(--lacivert);color:var(--sari);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(11,37,69,.18)}
+.hz-simge svg{width:30px;height:30px}
+.hz-yazi{display:flex;flex-direction:column;flex:1}
+.hz-ok{font-size:30px;line-height:1;color:var(--lacivert);font-weight:400;padding-bottom:4px}
+html[data-tema="koyu"] .hz-ok{color:var(--sari)}
+/* Logo 1: kalkan + damla */
+.logo-kalkan{display:flex;flex-direction:row;align-items:center;gap:10px;text-decoration:none}
+.logo-kalkan .kalkan{width:50px;height:58px;flex:0 0 auto}
+.logo-kalkan .logo-iki{display:flex;text-align:left;font-family:"Arial Black","Segoe UI",Arial,sans-serif;font-weight:900;line-height:1.05;color:#fff}
+.logo-kalkan .logo-iki span{color:var(--sari)}
+@media (max-width:480px){.ust .logo{font-size:22px}.logo-kalkan .kalkan{width:40px;height:46px}.logo-kalkan{gap:7px}}
+/* Kutular örnekteki gibi: beyaz kart, renkli simge */
+.ust .logo-kalkan>.logo-iki{color:#fff}.ust .logo-kalkan>.logo-iki span{color:var(--sari)}
+.secim-ic .secim-izgara a:nth-child(n){background:#fff;border:1px solid #e1e8f0;box-shadow:0 6px 16px rgba(11,37,69,.10);color:#0b2545}
+.secim-ic .secim-izgara a small{color:#5b6b78}
+.hz-simge{flex:0 0 56px;height:56px;border-radius:14px;background:#eef5fd;box-shadow:none}
+.hz-simge svg{width:44px;height:44px}
+html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(n){background:#15262d;border-color:#24404a;color:#e8f1f2}
+html[data-tema="koyu"] .hz-simge{background:#1b3038}
+/* Üst alan düzeni: rozet | logo, ortalı ve hizalı */
+.ust{padding:18px 16px !important;justify-content:center}
+.ust .logo-satir{display:flex;align-items:center;justify-content:center;gap:0}
+.ust .yirmidort{position:static !important;transform:none !important;padding-right:14px;margin-right:14px;border-right:1px solid rgba(255,255,255,.22)}
+.ust .yirmidort svg{width:112px !important;height:53px !important}
+.ust .sag{top:8px;right:10px}
+@media (max-width:480px){
+  .ust{padding:16px 10px !important}
+  .ust .yirmidort{padding-right:10px;margin-right:10px}
+  .ust .yirmidort svg{width:96px !important;height:45px !important}
+  .ust .logo{font-size:20px}
+  .logo-kalkan .kalkan{width:36px;height:42px}
+}
+/* Logo en solda, 7/24 sağda */
+.ust{padding-right:42px !important}
+.ust .marka{width:100%}
+.ust .logo-satir{width:100%;justify-content:space-between}
+.ust .logo-kalkan{order:1}
+.ust .yirmidort{order:2;border-right:0;padding-right:0;margin-right:0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;margin-left:10px}
+@media (max-width:480px){.ust{padding-right:34px !important}.ust .yirmidort{padding-left:8px;margin-left:6px}}
+/* Logo alanı dikeyde geniş */
+.ust{padding-top:30px !important;padding-bottom:30px !important}
+@media (max-width:480px){.ust{padding-top:28px !important;padding-bottom:28px !important}}
+/* 7/24 rozeti: sade, iki renk (sarı + beyaz) */
+.ust .yirmidort .hiz-cizgi{stroke:var(--sari)}
+.ust .yirmidort .ok-yay{stroke:var(--sari)}
+.ust .yirmidort circle[fill="#e02424"]{fill:var(--sari)}
+.ust .yirmidort text{fill:#fff}
+.ust .yirmidort text[font-size="27"]{fill:var(--sari)}
+/* 7/24 rozeti: saat simgesi + okunur yazı */
+.ust .yirmidort{display:flex;align-items:center;gap:6px;line-height:1}
+.ust .yirmidort svg{width:58px !important;height:50px !important}
+.yd-yazi{display:flex;flex-direction:column;line-height:1}
+.yd-yazi b{font-family:"Arial Black",Arial,sans-serif;font-style:italic;font-weight:900;font-size:26px;color:var(--sari);letter-spacing:-.5px}
+.yd-yazi small{margin-top:4px;font-size:12px;font-weight:700;color:#fff;letter-spacing:.6px;line-height:1.2}
+@media (max-width:480px){.ust .yirmidort svg{width:46px !important;height:40px !important}.yd-yazi b{font-size:22px}.yd-yazi small{font-size:11px}.ust .yirmidort{gap:4px}}
+.sayfa-ust{margin-top:14px;padding:26px}.sayfa-ust h1{font-size:32px;line-height:1.15;margin:8px 0 12px}.sayfa-ust p{margin:0 0 18px;color:var(--soluk);font-size:16px}.geri{display:inline-block;font-size:13px;font-weight:600;color:var(--soluk);text-decoration:none;margin-bottom:6px}.liste.kart{background:var(--kart);border:0}.bolge-kutu{margin-top:14px;padding:20px 22px;font-size:15px}.bolge-kutu b{display:block;margin-bottom:4px}@media (max-width:600px){.sayfa-ust{padding:20px}.sayfa-ust h1{font-size:26px}}
+</style>
 </head>
 <body>
 
@@ -253,22 +351,25 @@ html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(8){background:#2b2f1f
 
   <header class="kart ust">
     <div class="marka">
-      <a class="logo logo-iki" href="#">GÜVEN<span>VİDANJÖR</span></a>
+      <div class="logo-satir"><span class="yirmidort" aria-label="7 gün 24 saat açık"><svg viewBox="0 0 74 64" width="62" height="54" aria-hidden="true">
+        <g class="hiz-cizgi" stroke="#e02424" stroke-width="3" stroke-linecap="round">
+          <line x1="2" y1="22" x2="14" y2="22"/><line x1="5" y1="32" x2="17" y2="32"/><line x1="2" y1="42" x2="14" y2="42"/>
+        </g>
+        <g class="ok-yay" fill="none" stroke="#e02424" stroke-width="3.4" stroke-linecap="round">
+          <path d="M24.35 44.5 A25 25 0 1 1 67.65 44.5"/>
+          <path d="M72.1 42.8 L65.2 48.8 L64.2 39.6" stroke-linejoin="round"/>
+        </g>
+        <circle cx="46" cy="32" r="18" fill="#fff" stroke="#0f172a" stroke-width="3"/>
+        <g stroke="#0f172a" stroke-linecap="round">
+          <line x1="46" y1="16.5" x2="46" y2="19.5" stroke-width="2"/><line x1="61.5" y1="32" x2="58.5" y2="32" stroke-width="2"/><line x1="46" y1="47.5" x2="46" y2="44.5" stroke-width="2"/><line x1="30.5" y1="32" x2="33.5" y2="32" stroke-width="2"/>
+          <line x1="46" y1="32" x2="46" y2="22" stroke-width="3"/><line x1="46" y1="32" x2="53" y2="35" stroke-width="3"/>
+        </g>
+        <circle cx="46" cy="32" r="2.4" fill="#e02424"/>
+        
+      </svg><span class="yd-yazi"><b>7/24</b><small>KESİNTİSİZ<br>HİZMET</small></span></span>
+      <a class="logo logo-kalkan" href="#"><svg class="kalkan" viewBox="0 0 64 74" aria-hidden="true"><path d="M32 3 L59 13 V36 C59 53 47 65 32 71 C17 65 5 53 5 36 V13 Z" fill="#ffc400"/><path d="M32 10 L53 18 V36 C53 49 44 59 32 64 C20 59 11 49 11 36 V18 Z" fill="#0b2545"/><path d="M32 20 C38 29 43 35 43 42 A11 11 0 0 1 21 42 C21 35 26 29 32 20 Z" fill="#fff"/><path d="M27 43 A5 5 0 0 0 32 48" fill="none" stroke="#0b2545" stroke-width="2.4" stroke-linecap="round"/></svg><span class="logo-iki">GÜVEN<span>VİDANJÖR</span></span></a></div>
     </div>
     <div class="sag">
-      <span class="yirmidort" aria-label="7 gün 24 saat açık"><svg viewBox="0 0 80 56" width="74" height="52" aria-hidden="true">
-        <g class="hiz-cizgi" stroke="#e02424" stroke-width="3.2" stroke-linecap="round">
-          <line x1="2" y1="18" x2="20" y2="18"/><line x1="8" y1="28" x2="22" y2="28"/><line x1="2" y1="38" x2="20" y2="38"/>
-        </g>
-        <g transform="translate(52 28) skewX(-8)">
-          <circle r="25" fill="#e02424"/>
-          <circle r="21" fill="none" stroke="#fff" stroke-width="1.6"/>
-          <g stroke="#fff" stroke-width="2" stroke-linecap="round">
-            <line y1="-21" y2="-17"/><line x1="21" x2="17"/><line y1="21" y2="17"/><line x1="-21" x2="-17"/>
-          </g>
-          <text y="6" text-anchor="middle" font-size="17" font-weight="800" fill="#fff" font-family="inherit">7/24</text>
-        </g>
-      </svg></span>
       <button class="tema-tus" onclick="temaDegis()" title="Koyu renge geç" aria-label="Koyu renge geç"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></button>
     </div>
   </header>
@@ -341,7 +442,7 @@ html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(8){background:#2b2f1f
       <label for="t-ad">Adınız</label><input id="t-ad" required autocomplete="name">
       <label for="t-tel">Telefonunuz</label><input id="t-tel" type="tel" required autocomplete="tel" placeholder="05xx xxx xx xx">
       <label for="t-hiz">Hizmet</label>
-      <select id="t-hiz"><option>Tuvalet / lavabo açma</option><option>Tıkanıklık / gider açma</option><option>Kanalizasyon açma</option><option>Logar / rögar</option><option>Foseptik çekimi</option><option>Yağ tutucu temizleme</option><option>Kameralı arıza tespiti</option><option>Vidanjör</option></select>
+      <select id="t-hiz"><option>Tuvalet / lavabo açma</option><option>Tıkanıklık / gider açma</option><option>Kanalizasyon açma</option><option>Logar / rögar</option><option>Foseptik çekimi</option><option>Yağ tutucu temizleme</option><option>Vidanjör</option></select>
       <label for="t-ilce">İlçe / mahalle</label><input id="t-ilce" placeholder="Örn. Kepez, Varsak">
       <label for="t-not">Kısaca sorun (isteğe bağlı)</label><textarea id="t-not"></textarea>
       <button type="submit">WhatsApp ile Gönder</button>
