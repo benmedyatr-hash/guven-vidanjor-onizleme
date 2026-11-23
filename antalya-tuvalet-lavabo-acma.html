@@ -436,6 +436,17 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
   .manset>img{flex:1 1 auto;height:auto !important;min-height:150px}
   .manset-ic{flex:0 0 auto}
 }
+/* İncele düğmeleri: sarı, dikkat çekici */
+.incele{background:var(--sari) !important;border:0 !important;color:var(--lacivert) !important;font-weight:800 !important;font-size:16px !important;height:48px !important;border-radius:14px !important;box-shadow:0 6px 14px rgba(255,196,0,.35);transition:transform .15s}
+.incele:active{transform:scale(.98)}
+.incele span{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--lacivert);color:var(--sari);font-size:16px}
+/* Form kaldırıldı: harita tek sütun, tam genişlik */
+.form-harita{grid-template-columns:1fr !important}
+/* İncele düğmeleri: lacivert kutu, sarı ok */
+.incele{background:var(--lacivert) !important;color:#fff !important;box-shadow:0 6px 14px rgba(11,37,69,.28) !important}
+.incele span{background:var(--sari) !important;color:var(--lacivert) !important;font-weight:900}
+/* Araç ve Cihazlar: 5 kart */
+@media (min-width:821px){.araclar{grid-template-columns:repeat(5,1fr) !important}.arac{padding:18px}}
 .sayfa-ust{margin-top:14px;padding:26px}.sayfa-ust h1{font-size:32px;line-height:1.15;margin:8px 0 12px}.sayfa-ust p{margin:0 0 18px;color:var(--soluk);font-size:16px}.geri{display:inline-block;font-size:13px;font-weight:600;color:var(--soluk);text-decoration:none;margin-bottom:6px}.liste.kart{background:var(--kart);border:0}.bolge-kutu{margin-top:14px;padding:20px 22px;font-size:15px}.bolge-kutu b{display:block;margin-bottom:4px}@media (max-width:600px){.sayfa-ust{padding:20px}.sayfa-ust h1{font-size:26px}}
 </style>
 </head>
@@ -513,31 +524,7 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
   <div class="baslik"><h2>Diğer Hizmetlerimiz</h2></div>
   <div class="kart ilceler"></div>
 
-<div class="kart iletisim" id="iletisim">
-    <div>
-      <h2>Bizimle hızlıca iletişime geçin</h2>
-      <p>Arayın ya da WhatsApp'tan yazın, en yakın aracımızı yönlendirelim.</p>
-    </div>
-    <div class="bilgi">
-      <div><b>Telefon</b>0532 362 07 44</div>
-      <div><b>Adres</b>Karşıyaka 3010. Sk. No:19 D:1, 07210 Kepez/Antalya</div>
-      <div><b>Çalışma Saatleri</b>7 gün 24 saat</div>
-    </div>
-  </div>
-
-  <div class="form-harita">
-    <form class="kart talep" onsubmit="return talepGonder(event)">
-      <h2>Sizi Arayalım</h2>
-      <p>Bilgileri yazın, WhatsApp'tan bize iletilsin.</p>
-      <label for="t-ad">Adınız</label><input id="t-ad" required autocomplete="name">
-      <label for="t-tel">Telefonunuz</label><input id="t-tel" type="tel" required autocomplete="tel" placeholder="05xx xxx xx xx">
-      <label for="t-hiz">Hizmet</label>
-      <select id="t-hiz"><option>Tuvalet / lavabo açma</option><option>Tıkanıklık / gider açma</option><option>Kanalizasyon açma</option><option>Logar / rögar</option><option>Foseptik çekimi</option><option>Yağ tutucu temizleme</option><option>Vidanjör</option></select>
-      <label for="t-ilce">İlçe / mahalle</label><input id="t-ilce" placeholder="Örn. Kepez, Varsak">
-      <label for="t-not">Kısaca sorun (isteğe bağlı)</label><textarea id="t-not"></textarea>
-      <button type="submit">WhatsApp ile Gönder</button>
-      <div class="not">Fotoğraf göndermek isterseniz WhatsApp açılınca ekleyebilirsiniz.</div>
-    </form>
+<div class="form-harita" id="iletisim">
     <div class="kart harita">
       <iframe src="https://www.google.com/maps?q=G%C3%BCven%20Vidanj%C3%B6r%2C%20Kar%C5%9F%C4%B1yaka%203010.%20Sk.%20No%3A19%20D%3A1%2C%2007210%20Kepez%2FAntalya&amp;output=embed" loading="lazy" title="Güven Vidanjör konum"></iframe>
       <div class="harita-alt">
