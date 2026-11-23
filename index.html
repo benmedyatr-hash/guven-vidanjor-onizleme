@@ -487,6 +487,12 @@ footer.alt-bilgi{display:block;padding:0;justify-content:initial}
 .harita-alt b{color:var(--sari);font-size:18px}
 .harita-alt small{color:#dbe5f1}
 .harita .yol{background:var(--sari) !important;color:var(--lacivert) !important;font-weight:800;box-shadow:0 6px 14px rgba(255,196,0,.3)}
+/* Yalnız HİZMETLERİMİZ başlığı: Hızlı Müdahale kartı gibi */
+.secim-ic h2{position:relative;overflow:hidden;background:var(--lacivert);border-left:5px solid var(--sari);border-radius:16px;padding:16px 20px;color:var(--sari) !important;box-shadow:0 8px 20px rgba(11,37,69,.25);margin-bottom:10px !important}
+.secim-ic h2:after{content:"";position:absolute;right:-26px;top:-26px;width:80px;height:80px;border-radius:50%;background:rgba(255,196,0,.12)}/* Nasıl Çalışıyoruz? başlığı: aynı kart */
+.baslik-kart h2{position:relative;overflow:hidden;display:block;background:var(--lacivert);border-left:5px solid var(--sari);border-radius:16px;padding:16px 20px;color:var(--sari);text-align:left;box-shadow:0 8px 20px rgba(11,37,69,.25)}
+.baslik-kart h2:after{content:"";position:absolute;right:-26px;top:-26px;width:80px;height:80px;border-radius:50%;background:rgba(255,196,0,.12)}
+.baslik-kart p{text-align:left;margin-top:10px !important}
 </style>
 </head>
 <body>
@@ -565,7 +571,7 @@ footer.alt-bilgi{display:block;padding:0;justify-content:initial}
     </div>
   </div>
 
-<div class="baslik" id="hizmetler">
+<div class="baslik baslik-kart" id="hizmetler">
     <h2>Hizmetlerimiz</h2>
     <p>Vidanjör ve altyapı temizliğinde ihtiyacınız olan her şey.</p>
   </div>
@@ -596,14 +602,7 @@ footer.alt-bilgi{display:block;padding:0;justify-content:initial}
 
 <div class="kart ilceler" id="tum-hizmetler" style="margin-top:14px"><a href="antalya-yag-tutucu-temizleme">Yağ Tutucu Temizleme</a></div>
 
-  <div class="baslik"><h2>Nasıl Çalışıyoruz?</h2><p>Üç adımda sorun çözülür.</p></div>
-  <div class="adimlar">
-    <div class="kart adim"><span class="no">1</span><h3>Arayın ya da yazın</h3><p>Sorunu ve adresinizi söyleyin. İsterseniz WhatsApp'tan fotoğraf gönderin.</p></div>
-    <div class="kart adim"><span class="no">2</span><h3>Araç yola çıkar</h3><p>İşe uygun aracı ve ekibi yönlendiririz, hemen adresinize geliyoruz.</p></div>
-    <div class="kart adim"><span class="no">3</span><h3>Temiz teslim</h3><p>Tıkanıklık açılır ya da çekim yapılır, alan temiz bırakılır.</p></div>
-  </div>
-
-  <div class="baslik"><h2>Araç ve Cihazlarımız</h2><p>Her işe uygun ekipman.</p></div>
+  <div class="baslik baslik-kart"><h2>Araç ve Cihazlarımız</h2><p>Her işe uygun ekipman.</p></div>
   <div class="araclar">
     <div class="kart arac"><span class="etk">Araç</span><h3>Vidanjör</h3><p>Vakumlu tankıyla foseptik, logar ve yağ tutucu içindeki atığı çeker.</p><div class="is">Foseptik çekimi · Yağ tutucu · Logar</div></div>
     <div class="kart arac"><span class="etk">Araç</span><h3>Kombine Kanal Açma Aracı</h3><p>Basınçlı su ile hattı açar, aynı anda vakumla atığı çeker.</p><div class="is">Kanalizasyon açma · Kanal temizleme</div></div>
@@ -612,7 +611,7 @@ footer.alt-bilgi{display:block;padding:0;justify-content:initial}
     <div class="kart arac"><span class="etk">Cihaz</span><h3>Kanal Görüntüleme Cihazı</h3><p>Borunun içini görüntüler, tıkanıklığın ve arızanın yerini gösterir.</p><div class="is">Kanal görüntüleme · Arıza yeri tespiti</div></div>
   </div>
 
-<div class="baslik" id="bolgeler">
+<div class="baslik baslik-kart" id="bolgeler">
     <h2>Bölgelerimizden</h2>
     <p>Her ilçe için ayrı sayfa — Google'da "ilçe + vidanjör" aramalarında çıkmak için.</p>
   </div>
@@ -627,7 +626,7 @@ footer.alt-bilgi{display:block;padding:0;justify-content:initial}
     <a href="#">Muratpaşa Vidanjör</a><a href="#">Kepez Vidanjör</a><a href="#">Konyaaltı Vidanjör</a><a href="#">Döşemealtı Vidanjör</a><a href="#">Aksu Vidanjör</a><a href="#">Alanya Vidanjör</a><a href="#">Manavgat Vidanjör</a><a href="#">Serik Vidanjör</a><a href="#">Kemer Vidanjör</a><a href="#">Kumluca Vidanjör</a><a href="#">Finike Vidanjör</a><a href="#">Kaş Vidanjör</a><a href="#">Demre Vidanjör</a><a href="#">Elmalı Vidanjör</a><a href="#">Korkuteli Vidanjör</a><a href="#">Gazipaşa Vidanjör</a><a href="#">Akseki Vidanjör</a><a href="#">Gündoğmuş Vidanjör</a><a href="#">İbradı Vidanjör</a>
   </div>
 
-  <div class="baslik" id="sss"><h2>Sık Sorulan Sorular</h2></div>
+  <div class="baslik baslik-kart" id="sss"><h2>Sık Sorulan Sorular</h2></div>
   <div class="sss">
     <details class="kart"><summary>Foseptik ne sıklıkla çekilmeli?</summary><p>Kullanıma göre değişir; genelde 6–12 ayda bir önerilir.</p></details>
     <details class="kart"><summary>Gece ve hafta sonu geliyor musunuz?</summary><p>Evet, 7/24 hizmet veriyoruz.</p></details>
