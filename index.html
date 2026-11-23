@@ -261,7 +261,7 @@ html[data-tema="koyu"] .secim-ic .secim-izgara a:nth-child(8){background:#2b2f1f
 .manset h1{margin:0;font-size:30px;line-height:1.12;font-weight:800}
 .manset h1 mark{display:inline-block;margin-top:8px;background:var(--lacivert);color:var(--sari);padding:6px 14px 8px;border-radius:12px;border:2px solid var(--sari);font-size:34px;line-height:1.05}
 .manset .alt{margin:12px 0 14px;font-size:17px;font-weight:700}
-.manset ul{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:8px}
+.manset ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .manset li{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px}
 .manset li:before{content:"";flex:0 0 20px;height:20px;border-radius:50%;background:var(--sari) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%230b2545' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
 .manset-tus{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -336,6 +336,12 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
 /* Logo yazısı 2 tık büyük */
 .ust .logo-kalkan>.logo-iki{font-size:33px}
 @media (max-width:480px){.ust .logo-kalkan>.logo-iki{font-size:24px}}
+/* Manşet: resim üstte net, yazılar altta */
+.manset{display:block;min-height:0 !important;background:var(--lacivert)}
+.manset:before{display:none}
+.manset>img{position:static;display:block;width:100%;height:380px;object-fit:cover}
+.manset-ic{padding:22px 22px 22px}
+@media (max-width:600px){.manset>img{height:240px}}
 </style>
 </head>
 <body>
@@ -381,10 +387,6 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
       <h1>Antalya'da Profesyonel<br><mark>Vidanjör Hizmetleri</mark></h1>
       <div class="alt">Güvenilir çözüm ortağınız</div>
       <ul><li>7/24 Kesintisiz Hizmet</li><li>Hızlı Müdahale</li><li>Uygun Fiyat</li></ul>
-      <div class="manset-tus">
-        <a class="ara" href="tel:+905323620744">Hemen Ara<small>0532 362 07 44</small></a>
-        <a class="wa" href="https://wa.me/905323620744" target="_blank">WhatsApp<small>Mesaj Yazın</small></a>
-      </div>
     </div>
   </section>
 
