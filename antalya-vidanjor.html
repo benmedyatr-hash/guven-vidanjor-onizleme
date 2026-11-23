@@ -449,6 +449,29 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
 @media (min-width:821px){.araclar{grid-template-columns:repeat(5,1fr) !important}.arac{padding:18px}}
 /* Bilgisayarda bilgi kartları sıkışmasın: alt alta */
 .mini{grid-template-columns:1fr !important}
+/* Tüm İncele düğmeleri aynı (tam) uzunlukta */
+.genis .incele{width:100% !important}
+/* Araç ve Cihazlar: kutu kutu lacivert / sarı */
+.arac{border-radius:20px;box-shadow:0 8px 20px rgba(11,37,69,.18)}
+.arac:nth-child(odd){background:var(--lacivert) !important;color:#fff}
+.arac:nth-child(odd) .etk{color:var(--lacivert);background:var(--sari)}
+.arac:nth-child(odd) h3{color:#fff}
+.arac:nth-child(odd) p{color:#c9d6e6}
+.arac:nth-child(odd) .is{color:var(--sari);border-top-color:rgba(255,255,255,.18)}
+.arac:nth-child(even){background:var(--sari) !important;color:var(--lacivert)}
+.arac:nth-child(even) .etk{color:var(--sari);background:var(--lacivert)}
+.arac:nth-child(even) h3{color:var(--lacivert)}
+.arac:nth-child(even) p{color:#3d3200}
+.arac:nth-child(even) .is{color:var(--lacivert);font-weight:700;border-top-color:rgba(11,37,69,.2)}
+.arac .etk{display:inline-block;align-self:flex-start;padding:3px 10px;border-radius:20px}
+.arac .is{font-weight:700}
+/* Araç ve Cihazlar: Hızlı Müdahale kartlarıyla aynı stil */
+.arac:nth-child(n){position:relative;overflow:hidden;background:var(--lacivert) !important;color:#fff;border-left:5px solid var(--sari);box-shadow:0 8px 20px rgba(11,37,69,.25)}
+.arac:nth-child(n):after{content:"";position:absolute;right:-26px;top:-26px;width:90px;height:90px;border-radius:50%;background:rgba(255,196,0,.12)}
+.arac:nth-child(n) .etk{color:var(--lacivert);background:var(--sari)}
+.arac:nth-child(n) h3{color:var(--sari);font-weight:800}
+.arac:nth-child(n) p{color:#dbe5f1}
+.arac:nth-child(n) .is{color:#fff;font-weight:700;border-top-color:rgba(255,255,255,.18)}
 .sayfa-ust{margin-top:14px;padding:26px}.sayfa-ust h1{font-size:32px;line-height:1.15;margin:8px 0 12px}.sayfa-ust p{margin:0 0 18px;color:var(--soluk);font-size:16px}.geri{display:inline-block;font-size:13px;font-weight:600;color:var(--soluk);text-decoration:none;margin-bottom:6px}.liste.kart{background:var(--kart);border:0}.bolge-kutu{margin-top:14px;padding:20px 22px;font-size:15px}.bolge-kutu b{display:block;margin-bottom:4px}@media (max-width:600px){.sayfa-ust{padding:20px}.sayfa-ust h1{font-size:26px}}
 </style>
 </head>
