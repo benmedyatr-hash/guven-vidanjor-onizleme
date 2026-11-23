@@ -409,6 +409,27 @@ html[data-tema="koyu"] .hz-simge{background:#1b3038}
 .ust .sag{position:absolute !important;right:10px;top:8px}
 .ust .sag .tema-tus{width:26px;height:26px;border:0;background:transparent;color:#c9d6e6}
 .ust .sag .tema-tus svg{width:14px;height:14px}
+/* "Antalya'da Profesyonel" biraz yukarı */
+.manset-ic{padding-top:10px !important}
+.manset h1{margin-top:0}
+/* Mobilde lacivert manşet kaydırmadan sığsın */
+@media (max-width:600px){
+  .manset>img{height:190px}
+  .manset-ic{padding:12px 18px 16px !important}
+  .manset h1{font-size:22px;line-height:1.15}
+  .manset h1 br{display:none}
+  .manset h1 mark{font-size:25px;margin-top:10px;padding:5px 12px 6px}
+  .manset .alt{font-size:22px !important;line-height:1.15;margin:10px 0 10px !important}
+  .manset ul{gap:5px}
+  .manset li{font-size:15px}
+  .manset li:before{flex-basis:18px;height:18px;background-size:18px}
+}
+/* "7/24 Güvenilir çözüm ortağınız" tek satır; "Antalya'da Profesyonel" ile aynı ölçü */
+@media (max-width:600px){
+  .manset-ic{padding-left:16px !important;padding-right:12px !important}
+  .manset h1,.manset .alt{font-size:min(22px,5vw) !important}
+  .manset .alt{white-space:nowrap}
+}
 .sayfa-ust{margin-top:14px;padding:26px}.sayfa-ust h1{font-size:32px;line-height:1.15;margin:8px 0 12px}.sayfa-ust p{margin:0 0 18px;color:var(--soluk);font-size:16px}.geri{display:inline-block;font-size:13px;font-weight:600;color:var(--soluk);text-decoration:none;margin-bottom:6px}.liste.kart{background:var(--kart);border:0}.bolge-kutu{margin-top:14px;padding:20px 22px;font-size:15px}.bolge-kutu b{display:block;margin-bottom:4px}@media (max-width:600px){.sayfa-ust{padding:20px}.sayfa-ust h1{font-size:26px}}
 </style>
 </head>
